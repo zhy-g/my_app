@@ -6,10 +6,13 @@
 
 <script>
 import HomeHeader from './components/header'
+import HomeSwiper from './components/Swiper'
+
 export default {
     name: 'Home',
     components: {
-      HomeHeader
+      HomeHeader,
+      HomeSwiper
     }
 }
 </script>
