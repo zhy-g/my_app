@@ -1,4 +1,5 @@
 <template>
+    <div class="wrapper">
      <swiper :options="swiperOption" >
     <!-- slides -->
     <swiper-slide>
@@ -8,12 +9,15 @@
     <img class='swiper-img' src='http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/201911/1d8faa9f4d49b77ca1e61e2b478260f7.jpg_750x200_25cf76e2.jpg'/>
     </swiper-slide>
     <swiper-slide>
-      <img class="swiper-img" src="https://img1.qunarzz.com/sight/p0/1802/40/40b2075640718d7a3.img.png_600x330_11cd3f65.png" alt="">
+      <img class="swiper-img" src="http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/201910/e7eac5a5e99e6517c61b953c0fece63b.jpg_750x200_4b701cf8.jpg">
     </swiper-slide>
-    <swiper-slide>I'm Slide 4</swiper-slide>
+    <swiper-slide>
+      <img class="swiper-img" src="http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/201911/2b3a9445cc37885eb13e0402baef9f5e.png_750x200_24df2b41.png" alt="">
+    </swiper-slide>
     <!-- Optional controls -->
+   
     <div class="swiper-pagination"  slot="pagination"></div>
-  </swiper>
+  </swiper> </div>
 </template>
 
 
@@ -29,7 +33,11 @@ export default {
 }
 </script>
 
-<style lang='stylus'>
- .swiper-img
-   width: 100%
+<style lang='stylus'> 
+  .wrapper
+    overflow hidden
+    padding-bottom 26.66%
+    width: 100%
+    .swiper-img
+     width: 100%
 </style>
