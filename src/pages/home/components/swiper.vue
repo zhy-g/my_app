@@ -36,7 +36,7 @@ export default {
 <style lang='stylus'> 
   .wrapper
     overflow hidden
-    padding-bottom 26.66%
+    // padding-bottom 26.66%
     width: 100%
     .swiper-img
      width: 100%
