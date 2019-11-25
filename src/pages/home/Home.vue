@@ -4,6 +4,7 @@
        <home-swiper></home-swiper>
        <home-icons></home-icons>
        <home-hot></home-hot>
+       <home-liked></home-liked>
     </div>
 </template>
 
@@ -12,6 +13,7 @@ import HomeHeader from './components/header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeHot from './components/Hot'
+import HomeLiked from './components/Like'
 
 export default {
     name: 'Home',
@@ -19,7 +21,8 @@ export default {
       HomeHeader,
       HomeSwiper,
       HomeIcons,
-      HomeHot
+      HomeHot,
+      HomeLiked
     }
 }
 </script>
