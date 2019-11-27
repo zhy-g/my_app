@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="title">
-            <img class="title-img" srcc="">
+            <img class="title-img" src="http://img1.qunarzz.com/piao/fusion/1711/89/ebc329f16c55bb02.png">
             <span class="title-content">猜你喜欢</span>
             <ul>
                 <li class="item" v-for='item of likeList' :key="item.id">
@@ -27,10 +27,10 @@
 
 <script>
 export default {
-    name: 'HomeLiked',
+    name: 'HomeLike',
     data () {
         return {
-            linkeList: [
+            likeList: [
              {
                 id: '001',
                 imgUrl: "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg",
@@ -117,6 +117,7 @@ export default {
     }
 }
 </script>
+
 <style lang="stylus" scoped>
   .title 
     margin-top: .2rem
@@ -132,7 +133,7 @@ export default {
       color red
       font-size .32rem
       line-height .44rem
-    .item
+  .item
     overflow hidden
     display flex
     height 1.9rem
@@ -142,7 +143,7 @@ export default {
       width 2rem
       height 2rem
       padding .2rem
-    .item-iconfont
+    .item-info
       flex 1
       padding .1rem
       margin-top .3rem

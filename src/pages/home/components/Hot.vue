@@ -83,7 +83,7 @@
   .title
     position relative
     padding .2rem
-    padding-bottom -.1rem
+    padding-bottom -.1rem 
     .title-left
       font-size .32rem
       line-height .44rem
@@ -101,19 +101,19 @@
       position absolute
       top .36rem
       right .32rem
-    .wrapper
-      height 0
-      padding-bottom 40%
+  .wrapper
+    height 0
+    padding-bottom 40%
+    overflow hidden
+    width 100%
+    .hot-img 
       overflow hidden
-      width 100%
-      .hot-img 
-        overflow hidden
-        height 26%
-        margin-top -.2rem
-        .hot-img-content
-          margin .15rem
-          width 100%
-          height 100%
+      height 26%
+      margin-top -.2rem
+      .hot-img-content
+        margin .15rem
+        width 100%
+        height 100%
     .desc
       text-align center
       font-size .24rem
@@ -126,5 +126,5 @@
       color #ff8300
       span 
         color #212121
-        font-size .24rem
+         font-size .24rem
 </style>
