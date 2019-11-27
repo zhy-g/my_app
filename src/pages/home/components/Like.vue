@@ -121,7 +121,6 @@ export default {
 <style lang="stylus" scoped>
   .title 
     margin-top: .2rem
-    background #eee
     padding .2rem
     .title-img 
       width .3rem

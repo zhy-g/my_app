@@ -92,13 +92,12 @@ export default {
   .icons >>> .swiper-container
     height 0
     padding-bottom 50%
-//   .icons
-//     overflow hidden
-//     height: 0
-//     padding-top 2%
-//     padding-bottom  50%
-    // background #eeeeee
-    // icons层样式
+  .icons
+    overflow hidden
+    height: 0
+    padding-top 3%
+    padding-bottom  43%
+    icons层样式
     .icon
       position: relative
       overflow hidden

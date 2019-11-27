@@ -63,9 +63,10 @@ export default {
 @import '~styles/varibles.styl'
   .title
     .title-content
-      background #eeeeee
+    //   background #eeeeee
       text-indent 1.8em
-      height 2em
+      height 2.5em
+      line-height 2.5em
     .item
       width: 100%
       .item-img
