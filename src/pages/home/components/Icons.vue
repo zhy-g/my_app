@@ -16,64 +16,24 @@
 <script>
 export default {
     name: 'HomeIcons',
+    props: {
+        list: Array
+    },
+
     data () {
         return {
             swiperOption: {
                 // autoplay自动播放除了有ture和false值以外， 还可以直接指定轮播的时间间隔 例如： autoplay: 5000
                 autoplay: false
-            },
-            iconList: [{
-                id: "001",
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                desc: "景点门票"
-            },
-            {
-                id: "002",
-                imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/3ef092d0a89ffddb7f781cda30c8ae49.png',
-                desc: "错峰出行"
-            },{
-                id: "003",
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/ea/01d081dacb03cc02.png',
-                desc: '赏秋色'
-            },
-            {
-                id: "004",
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                desc: '一日游'
-            },
-            {
-                id: "005",
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/fa/2548667cb6e902.png',
-                desc: '上海自然博物馆'
-            },
-            {
-                id: "006",
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png',
-                desc: '黄浦江游船'
-            },
-            {
-                id: "007",
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png',
-                desc: '上海野生'
-            },
-            {
-                id: "008",
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/de/f26be47a6bf02a02.png',
-                desc: '上海迪士尼'
-            },
-            {
-                id: "009",
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png',
-                desc: '世纪公园'
-            },
-            ]
+            }
+            // 删掉iconList数组
         }
-     
-    },
+    },            
     computed:{
         pages (){
-            const pages = []
-            this.iconList.forEach((item, index) => {
+            const pages = [];
+            // 将iconList修改成list
+            this.list.forEach((item, index) => {
                 const page = Math.floor(index / 8)
                 if (!pages[page])
                 {
@@ -85,7 +45,7 @@ export default {
         }
     }
 }
-</script>
+</script>list
 
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
