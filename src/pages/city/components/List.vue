@@ -27,7 +27,7 @@
         <div class="area" 
             v-for='(item, key) of cities'
             :key='key'>
-            <div class="title border-topbottom">B{{key}}/div>
+            <div class="title border-topbottom">{{key}}</div>
             <div class="item-list">
                 <div class="border-bottom item"
                   v-for='innerItem of item'
@@ -37,7 +37,6 @@
             </div>
         </div>
       </div>
-    </div>
     </div>
 </template>
 

@@ -34,7 +34,7 @@ export default {
     // 通过getCityInfo函数获取city.json里的数据，然后传递给handleGetCityInfoSucc函数
     methods: {
         getCityInfo () {
-             axios.get('/api/city.json').then(this.handleGetCityInfoSucc)
+           axios.get('/api/city.json').then(this.handleGetCityInfoSucc)      
         },
         handleGetCityInfoSucc (res) {
             res = res.data
