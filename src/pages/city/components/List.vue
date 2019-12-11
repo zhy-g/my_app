@@ -1,6 +1,5 @@
 <template>
     <!-- 添加ref -->
-
     <div class="list" ref="wrapper">
       <div>
         <div class="area">
@@ -14,20 +13,31 @@
         <div class="area">
             <div class="title border-topbottom">热门城市</div>
             <div class="button-list">
-                <div class="button-wrapper">
-                    <div class="button">北京</div>
+              <!-- 通过item循环遍历传入的数据hot -->
+                <div class="button-wrapper" 
+                      v-for="item of hot"
+                      :key="item.id" >
+                    <div class="button">{{ item.name }}</div>
                 </div>
+
             </div>
         </div>
-        <div class="area">
-            <div class="title border-topbottom">B</div>
-            <div class="button-list">
-                <div class="button-wrapper">
-                    <div class="button">北京</div>
+
+        <!-- 添加v-for循环 -->
+        <div class="area" 
+            v-for='(item, key) of cities'
+            :key='key'>
+            <div class="title border-topbottom">B{{key}}/div>
+            <div class="item-list">
+                <div class="border-bottom item"
+                  v-for='innerItem of item'
+                  :key="innerItem.id">
+                    {{ innerItem.name }}
                 </div>
             </div>
         </div>
       </div>
+    </div>
     </div>
 </template>
 
@@ -37,6 +47,11 @@ import Bscroll from 'better-scroll'
 
 export default {
     name: 'CityList',
+    // props中指定传入数据的类型
+     props: {
+       hot: Array,
+       cities: Object
+     },
     // 添加声明周期函数并调用
     mounted () {
       this.scroll = new Bscroll(this.$refs.wrapper)
