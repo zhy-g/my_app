@@ -1,5 +1,8 @@
 <template>
-    <div class="list">
+    <!-- 添加ref -->
+
+    <div class="list" ref="wrapper">
+      <div>
         <div class="area">
             <div class="title border-topbottom">当前城市</div>
             <div class="button-list">
@@ -24,12 +27,20 @@
                 </div>
             </div>
         </div>
+      </div>
     </div>
 </template>
 
 <script>
+// 添加btter-scroll
+import Bscroll from 'better-scroll'
+
 export default {
-    name: 'CityList'
+    name: 'CityList',
+    // 添加声明周期函数并调用
+    mounted () {
+      this.scroll = new Bscroll(this.$refs.wrapper)
+    }
 }
 </script>
 
@@ -43,15 +54,23 @@ export default {
   .border-topbottom 
     &:after
       border-color #cccccc
-  .title
-    line-height .44rem
-    background #eee
-    padding-left .2rem
-    color #666
-    font-size .26rem
-  .button-list
+    // 添加.list类
+  .list
+    position: absolute 
     overflow hidden
-    padding .1rem .6rem .1rem .1rem
+    top: 1.58rem
+    left: 0
+    right 0
+    bottom 0
+    .title
+      line-height .44rem
+      background #eee
+      padding-left .2rem
+      color #666
+      font-size .26rem
+    .button-list
+     overflow hidden
+     padding .1rem .6rem .1rem .1rem
     .button-wrapper
       float left
       width 33.33%
