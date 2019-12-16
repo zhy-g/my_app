@@ -26,7 +26,8 @@
         <!-- 添加v-for循环 -->
         <div class="area" 
             v-for='(item, key) of cities'
-            :key='key'>
+            :key='key'
+            :ref="key">
             <div class="title border-topbottom">{{key}}</div>
             <div class="item-list">
                 <div class="border-bottom item"
@@ -49,11 +50,21 @@ export default {
     // props中指定传入数据的类型
      props: {
        hot: Array,
-       cities: Object
+       cities: Object,
+       letter: String
      },
     // 添加声明周期函数并调用
     mounted () {
       this.scroll = new Bscroll(this.$refs.wrapper)
+    },
+    watch: {
+      letter () {
+        if (this.letter) {
+          const element = this.$refs[this.letter][0]
+          //  console.log(element)
+          this.scroll.scrollToElement(element)
+        }
+      }
     }
 }
 </script>
