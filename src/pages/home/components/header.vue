@@ -17,10 +17,8 @@
 <script>
 export default {
     name: 'HomeHeader',
-    data () {
-      return {
-        city: "上海"
-      }
+    props: {
+      city: ''
     }
 }
 </script>
