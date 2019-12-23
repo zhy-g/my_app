@@ -1,7 +1,8 @@
 <template>
     <div>
       <!-- 通过绑定city属性来传值 -->
-       <home-header :city="city"></home-header>
+       <!-- <home-header :city="city"></home-header> -->
+       <home-header></home-header>
        <!-- 绑定list来床底swiperList数据 -->
        <home-swiper :list='swiperList'></home-swiper>
        <home-icons :list='iconList'></home-icons>

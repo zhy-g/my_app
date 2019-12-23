@@ -6,7 +6,7 @@
             <div class="title border-topbottom">当前城市</div>
             <div class="button-list">
                 <div class="button-wrapper">
-                    <div class="button">北京</div>
+                    <div class="button">{{ this.$store.state.city }}</div>
                 </div>
             </div>
         </div>
@@ -16,13 +16,15 @@
               <!-- 通过item循环遍历传入的数据hot -->
                 <div class="button-wrapper" 
                       v-for="item of hot"
-                      :key="item.id" >
+                      :key="item.id"
+                      @click='handleClickCity(item.name)'
+                       v-on:click="handleClick('hello')">
                     <div class="button">{{ item.name }}</div>
                 </div>
-
+            <p @click="handle_34">45454</p>
             </div>
         </div>
-
+       
         <!-- 添加v-for循环 -->
         <div class="area" 
             v-for='(item, key) of cities'
@@ -32,9 +34,12 @@
             <div class="item-list">
                 <div class="border-bottom item"
                   v-for='innerItem of item'
-                  :key="innerItem.id">
+                  :key="innerItem.id"
+                  @click="handleClickCity(innerItem.name)"
+                 >
                     {{ innerItem.name }}
                 </div>
+                
             </div>
         </div>
       </div>
@@ -52,6 +57,17 @@ export default {
        hot: Array,
        cities: Object,
        letter: String
+     },
+     methods: {
+        handleClickCity (city) {
+          alert(city)
+          this.$store.dispatch('changeCity', city)
+          // 通过路由器来实现页面跳转
+          this.$router.push('/') 
+        },
+      handle_34 :function () {
+        alert('nihao')
+      }
      },
     // 添加声明周期函数并调用
     mounted () {
